@@ -39,6 +39,11 @@ header {
 		color: $white;
 		display: none;
 
+		@include tablet {
+			max-width: 32rem;
+			margin: auto;
+		}
+
 		a {
 			text-decoration: underline;
 		}

@@ -88,6 +88,10 @@ header {
     height: 100vh;
     color: #ffffff;
     display: none; }
+    @media screen and (min-width: 600px) {
+      header .about {
+        max-width: 32rem;
+        margin: auto; } }
     header .about a {
       text-decoration: underline; }
 
