@@ -29,6 +29,10 @@ header {
 		float: right;
 		font-size: .8rem;
 		line-height: 1rem;
+
+		@include desktop {
+			font-size: .875rem;
+		}
 	}
 
 	.about {
@@ -42,6 +46,8 @@ header {
 		@include tablet {
 			max-width: 32rem;
 			margin: auto;
+			font-size: 1rem;
+			line-height: 1.4rem;
 		}
 
 		a {
@@ -142,6 +148,7 @@ main.search {
 	padding: .75rem;
 	display: none;
 	box-shadow: $shadow;
+	transition: .3s ease all;
 
 	@include desktop {
 		display: block;
