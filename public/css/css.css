@@ -66,10 +66,14 @@ a {
 header {
   width: 100%;
   position: fixed;
+  z-index: 2;
   top: 0;
   background-color: #0288D1;
   padding: 1rem;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.5); }
+  @media screen and (min-width: 900px) {
+    header {
+      padding: 1rem 2rem; } }
   header h1, header a {
     color: #ffffff;
     display: inline-block; }
@@ -113,8 +117,10 @@ button:hover, button:active, button:focus {
 footer {
   color: rgba(255, 255, 255, 0.8);
   font-size: .8rem; }
-  footer a {
+  footer a:link, footer a:visited {
     color: rgba(255, 255, 255, 0.8); }
+  footer a:hover, footer a:active, footer a:focus {
+    border-bottom: 1px solid #ffffff; }
 
 main.landing {
   height: 100vh;
@@ -128,7 +134,7 @@ main.landing {
     .landing .inputs {
       max-width: 70%;
       margin: auto; } }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 900px) {
     .landing .inputs {
       max-width: 60%; } }
   .landing .inputs input {
@@ -155,12 +161,37 @@ main.search {
   padding: .75rem;
   display: none;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5); }
+  @media screen and (min-width: 900px) {
+    .search .inputs {
+      display: block;
+      height: 100%;
+      width: 30%;
+      position: fixed;
+      left: 0;
+      padding: 1.25rem;
+      background-image: url(../img/background.jpg);
+      background-size: cover; } }
   .search .inputs input {
     width: 70%;
     margin-right: .75rem; }
+    @media screen and (min-width: 900px) {
+      .search .inputs input {
+        width: 100%;
+        margin: 0 0 .75rem 0;
+        line-height: 2.75rem; } }
   .search .inputs button {
     width: 25%;
     line-height: 2rem; }
+    @media screen and (min-width: 900px) {
+      .search .inputs button {
+        width: 50%;
+        float: right;
+        line-height: 2.5rem; } }
+
+@media screen and (min-width: 900px) {
+  #output_area {
+    width: 70%;
+    margin-left: 30%; } }
 
 article {
   background-color: #f7f7f7;
@@ -169,22 +200,39 @@ article {
   color: #757575;
   word-wrap: break-word; }
   @media screen and (min-width: 600px) {
-    article * {
-      max-width: 35rem;
+    article {
       padding-left: 2rem; } }
+  @media screen and (min-width: 900px) {
+    article {
+      padding: 2rem; } }
+  @media screen and (min-width: 600px) {
+    article * {
+      max-width: 35rem; } }
+  @media screen and (min-width: 900px) {
+    article * {
+      max-width: 42rem; } }
   article h2 {
     font-weight: 700;
     font-size: 1rem;
     margin-bottom: 1.35rem; }
+    @media screen and (min-width: 900px) {
+      article h2 {
+        font-size: 1.1rem; } }
   article p {
     font-size: .875rem;
     line-height: 1.35rem;
     margin-bottom: 1.35rem; }
+    @media screen and (min-width: 900px) {
+      article p {
+        font-size: 1rem; } }
   article a:link, article a:visited {
     color: #03A9F4;
     font-size: .875rem;
     margin-bottom: 1.35rem;
     transition: .2s ease all; }
+    @media screen and (min-width: 900px) {
+      article a:link, article a:visited {
+        font-size: 1rem; } }
   article a:hover, article a:focus, article a:active {
     color: #0288D1; }
 
@@ -192,5 +240,13 @@ article {
   width: 100%;
   background-color: #0288D1;
   padding: 1rem; }
+  @media screen and (min-width: 900px) {
+    .search footer {
+      width: 30%;
+      background: none;
+      text-align: center;
+      position: fixed;
+      bottom: 2%;
+      z-index: 1; } }
 
 /*# sourceMappingURL=css.css.map */
