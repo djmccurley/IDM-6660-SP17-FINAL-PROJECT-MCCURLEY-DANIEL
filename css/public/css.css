@@ -124,13 +124,6 @@ main.landing {
 .landing .inputs {
   padding: 40vh 1rem 0 1rem;
   width: 100%; }
-  @media screen and (min-width: 600px) {
-    .landing .inputs {
-      max-width: 70%;
-      margin: auto; } }
-  @media screen and (min-width: 960px) {
-    .landing .inputs {
-      max-width: 60%; } }
   .landing .inputs input {
     width: 100%;
     line-height: 2.75rem;
@@ -168,10 +161,6 @@ article {
   padding: 1.5rem 1rem;
   color: #757575;
   word-wrap: break-word; }
-  @media screen and (min-width: 600px) {
-    article * {
-      max-width: 35rem;
-      padding-left: 2rem; } }
   article h2 {
     font-weight: 700;
     font-size: 1rem;
@@ -179,7 +168,8 @@ article {
   article p {
     font-size: .875rem;
     line-height: 1.35rem;
-    margin-bottom: 1.35rem; }
+    margin-bottom: 1.35rem;
+    width: 31.25rem; }
   article a:link, article a:visited {
     color: #03A9F4;
     font-size: .875rem;

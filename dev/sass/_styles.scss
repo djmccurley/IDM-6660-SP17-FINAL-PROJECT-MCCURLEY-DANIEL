@@ -86,6 +86,15 @@ main.landing {
 	padding: 40vh 1rem 0 1rem;
 	width: 100%;
 
+	@include tablet {
+		max-width: 70%;
+		margin: auto;
+	}
+
+	@include desktop {
+		max-width: 60%;
+	}
+
 	input {
 		width: 100%;
 		line-height: 2.75rem;
@@ -137,11 +146,18 @@ article {
 	color: $dark-gray;
 	word-wrap: break-word; //contains long links with out overflow
 
+	* {
+		@include tablet {
+			max-width: 35rem;
+			padding-left: 2rem;
+		}
+	}
 
 	h2 {
 		font-weight: 700;
 		font-size: 1rem;
 		margin-bottom: 1.35rem;
+
 		
 	}
 
@@ -149,6 +165,7 @@ article {
 		font-size: .875rem; //14pt
 		line-height: 1.35rem; //14/19
 		margin-bottom: 1.35rem;
+		
 	}
 
 	a:link, a:visited {
