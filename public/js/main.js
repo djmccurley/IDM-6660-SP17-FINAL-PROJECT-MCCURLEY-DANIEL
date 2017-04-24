@@ -58,7 +58,7 @@ $(document).ready(function() {
 	$("#search").click(function() {
 		if(inputBox.value) {
 			$("main.landing").removeClass("landing").addClass("search");
-			$(".inputs").slideDown(300);
+			/*$(".inputs").slideDown(300);*/ //causing bug when going from desktop to narrower views
 			searchWiki();	
 		} else {
 			inputBox.placeholder = "Please enter a search term";

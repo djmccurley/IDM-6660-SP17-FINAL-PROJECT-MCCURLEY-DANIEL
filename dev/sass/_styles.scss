@@ -146,7 +146,7 @@ main.search {
 .search .inputs {
 	background-color: $light-blue;
 	padding: .75rem;
-	display: none;
+	/* display: none; */ //causing bug when going from desktop to narrower 
 	box-shadow: $shadow;
 	transition: .3s ease all;
 
