@@ -88,7 +88,6 @@ header {
     header a#aboutbutton::after {
       content: " +"; }
     header a#aboutbutton.expanded::after {
-      text-decoration: strikethrough;
       content: " –"; }
   header .about {
     padding: 4rem 2rem 2rem 2rem;
