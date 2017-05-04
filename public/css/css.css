@@ -198,6 +198,9 @@ main.search {
         float: right;
         line-height: 2.5rem; } }
 
+#output_area a:hover article, #output_area a:active article, #output_area a:focus article {
+  background-color: rgba(0, 0, 0, 0.15);
+  transition: .2s ease background-color; }
 @media screen and (min-width: 900px) {
   #output_area {
     width: 70%;
