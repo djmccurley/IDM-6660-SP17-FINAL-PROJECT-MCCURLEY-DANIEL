@@ -35,7 +35,7 @@ $(document).ready(function() {
 			//creates new object with current article title, desc and link
 			var thisArticle = new createEntry(title, description, link);
 			//passes current article object to be added to DIV
-			appendEntry(thisArticle);
+			appendEntry(thisArticle, link);
 		}
 	}
 	//creates HTML strings for each article element: title, desc and link
@@ -46,13 +46,17 @@ $(document).ready(function() {
 	}
 
 	//creates new div, appends all elements for article, appends div to output div
-	function appendEntry(thisArticle) {
+	function appendEntry(thisArticle, link) {
+		var newLink = document.createElement("a");
 		var newDiv = document.createElement("article");
+		newLink.appendChild(newDiv);
+		newLink.href = link;
+		newLink.target = "_blank";
 		newDiv.innerHTML = thisArticle.articleTitle;
 		newDiv.innerHTML += thisArticle.articleDescription;
 		newDiv.innerHTML += thisArticle.articleLink;
 
-		$("#output_area").append(newDiv);
+		$("#output_area").append(newLink);
 	}	
 
 	function startSearch() {
