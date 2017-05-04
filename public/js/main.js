@@ -37,6 +37,10 @@ $(document).ready(function() {
 			//passes current article object to be added to DIV
 			appendEntry(thisArticle, link);
 		}
+
+		if (response[1].length >= 1) {
+			endSearch();
+		}
 	}
 	//creates HTML strings for each article element: title, desc and link
 	function createEntry(title, description, link) {
@@ -58,6 +62,15 @@ $(document).ready(function() {
 
 		$("#output_area").append(newLink);
 	}	
+
+	function endSearch() {
+		var endNotice = document.createElement("a");
+		var endText = document.createElement("article");
+		endNotice.appendChild(endText);
+		endNotice.href = "#";
+		endText.innerHTML = "<a href='#'>Back to top</a>"
+		$("#output_area").append(endNotice);
+	}
 
 	function startSearch() {
 		if(inputBox.value) {
