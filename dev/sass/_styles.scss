@@ -33,6 +33,16 @@ header {
 		@include desktop {
 			font-size: .875rem;
 		}
+
+		&::after {
+			content: " +";
+		}
+
+		&.expanded::after {
+			text-decoration: strikethrough;
+			content: " –";
+		}
+
 	}
 
 	.about {

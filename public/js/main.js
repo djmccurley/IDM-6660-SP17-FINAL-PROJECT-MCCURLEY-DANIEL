@@ -84,5 +84,6 @@ $(document).ready(function() {
 
 	$("#aboutbutton").click(function() {
 		$(".about").slideToggle(300);
+		$(this).toggleClass("expanded");
 	});
 });
