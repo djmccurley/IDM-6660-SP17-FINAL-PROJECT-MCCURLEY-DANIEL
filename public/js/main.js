@@ -53,9 +53,9 @@ $(document).ready(function() {
 		newDiv.innerHTML += thisArticle.articleLink;
 
 		$("#output_area").append(newDiv);
-
 	}	
-	$("#search").click(function() {
+
+	function startSearch() {
 		if(inputBox.value) {
 			$("main.landing").removeClass("landing").addClass("search");
 			/*$(".inputs").slideDown(300);*/ //causing bug when going from desktop to narrower views
@@ -63,6 +63,19 @@ $(document).ready(function() {
 		} else {
 			inputBox.placeholder = "Please enter a search term";
 		}
+	}
+
+	//click event no longer needed with form submit working
+	//$("#search").click(startSearch());
+
+	/*
+		solution to preventing form submit found here:
+		http://stackoverflow.com/questions/8082846/form-submit-execute-javascript-best-practice 
+	*/
+
+	$(".search_form").on('submit', function() {
+		startSearch();
+		return false; //need to return false to prevent form submit
 	});
 
 	$("#aboutbutton").click(function() {
