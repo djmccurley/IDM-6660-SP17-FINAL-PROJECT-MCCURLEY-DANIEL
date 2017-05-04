@@ -175,7 +175,9 @@ main.search {
   padding: .75rem;
   /* display: none; */
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
-  transition: .3s ease all; }
+  transition: .3s ease all;
+  position: fixed;
+  width: 100%; }
   @media screen and (min-width: 900px) {
     .search .inputs {
       display: block;
@@ -203,13 +205,16 @@ main.search {
         float: right;
         line-height: 2.5rem; } }
 
-#output_area a:hover article, #output_area a:active article, #output_area a:focus article {
-  background-color: rgba(0, 0, 0, 0.15);
-  transition: .2s ease background-color; }
-@media screen and (min-width: 900px) {
-  #output_area {
-    width: 70%;
-    margin-left: 30%; } }
+#output_area {
+  padding-top: 4rem; }
+  #output_area a:hover article, #output_area a:active article, #output_area a:focus article {
+    background-color: rgba(0, 0, 0, 0.15);
+    transition: .2s ease background-color; }
+  @media screen and (min-width: 900px) {
+    #output_area {
+      padding-top: 0;
+      width: 70%;
+      margin-left: 30%; } }
 
 article {
   background-color: #f7f7f7;

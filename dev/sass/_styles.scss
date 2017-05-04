@@ -158,6 +158,8 @@ main.search {
 	/* display: none; */ //causing bug when going from desktop to narrower  
 	box-shadow: $shadow;
 	transition: .3s ease all;
+	position: fixed;
+	width: 100%;
 
 	@include desktop {
 		display: block;
@@ -196,11 +198,14 @@ main.search {
 }
 
 #output_area {
+	padding-top: 4rem;
+
 	a:hover article, a:active article, a:focus article {
 		background-color: rgba(0,0,0,.15);
 		transition: .2s ease background-color;
 	}
 	@include desktop {
+		padding-top: 0;
 		width: 70%;
 		margin-left: 30%;
 	}
