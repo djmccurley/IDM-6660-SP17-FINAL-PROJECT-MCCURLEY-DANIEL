@@ -19,7 +19,8 @@
 	<main class="landing">
 		<div class="inputs">    
 			<form class="search_form">
-			<input type="text" id="searchterm" name="searchbox" placeholder="What are you looking for?">
+			<!-- onFocus = "this.select()" autoselects input value on click/focus -->	
+			<input type="text" id="searchterm" name="searchbox" placeholder="What are you looking for?" onFocus="this.select()"> 
 			<button id="search" for="searchbox" type="submit">Search</button>
 			</form>
 		</div>
