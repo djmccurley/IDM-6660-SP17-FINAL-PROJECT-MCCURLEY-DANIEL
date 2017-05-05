@@ -19,7 +19,10 @@
 	<main class="landing">
 		<div class="inputs">    
 			<form class="search_form">
-			<!-- onFocus = "this.select()" autoselects input value on click/focus -->	
+			<!-- 
+				onFocus = "this.select()" autoselects input value on click/focus 
+				found here: http://stackoverflow.com/questions/210761/how-to-auto-select-an-input-field-and-the-text-in-it-on-page-load
+			-->	
 			<input type="text" id="searchterm" name="searchbox" placeholder="What are you looking for?" onFocus="this.select()"> 
 			<button id="search" for="searchbox" type="submit">Search</button>
 			</form>
