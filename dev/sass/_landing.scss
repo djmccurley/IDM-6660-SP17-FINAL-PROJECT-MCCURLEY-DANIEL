@@ -1,0 +1,40 @@
+//landing page state styles
+main.landing {
+	height: 100vh;
+	background-image: url("../img/background.jpg");
+	background-size: cover;
+}
+
+.landing .inputs {
+	padding: 40vh 1rem 0 1rem;
+	width: 100%;
+
+	@include tablet {
+		max-width: 70%;
+		margin: auto;
+	}
+
+	@include desktop {
+		max-width: 60%;
+	}
+
+	input {
+		width: 100%;
+		line-height: 2.75rem;
+		margin-bottom: .75rem;
+	}
+
+	button {
+		display: block;
+		width: 45%;
+		margin: auto;
+		line-height: 3.5rem;
+	}
+}
+
+.landing footer {
+	position: absolute;
+	bottom: 2%;
+	width: 100%;
+	text-align: center;
+}

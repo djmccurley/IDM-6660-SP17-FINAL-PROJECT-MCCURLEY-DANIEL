@@ -1,0 +1,144 @@
+
+
+
+//search state styles
+
+main.search {
+	margin-top: 3rem;
+}
+
+.search .inputs {
+	background-color: $light-blue;
+	padding: .75rem;
+	/* display: none; */ //causing bug when going from desktop to narrower  
+	box-shadow: $shadow;
+	transition: .3s ease all;
+	position: fixed;
+	width: 100%;
+
+	@include desktop {
+		display: block;
+		height: 100%;
+		width: 30%;
+		position: fixed;
+		left: 0;
+		padding: 1.25rem;
+		background-image: url(../img/background.jpg);
+		background-size: cover;
+
+	}
+
+	input {
+		width: 70%;
+		margin-right: .75rem;
+
+		@include desktop {
+			width: 100%;
+			margin: 0 0 .75rem 0;
+			line-height: 2.75rem;
+
+		}
+	}
+
+	button {
+		width: 25%;
+		line-height: 2rem;
+
+		@include desktop {
+			width: 50%;
+			float: right;
+			line-height: 2.5rem;
+		}
+	}
+}
+
+#output_area {
+	padding-top: 4rem;
+
+	a:hover article, a:active article, a:focus article {
+		background-color: rgba(0,0,0,.15);
+		transition: .2s ease background-color;
+	}
+	@include desktop {
+		padding-top: 0;
+		width: 70%;
+		margin-left: 30%;
+	}
+}
+article {
+	background-color: $light-gray;
+	border-bottom: 1px solid rgba(0,0,0,.12);
+	padding: 1.5rem 1rem;
+	color: $dark-gray;
+	word-wrap: break-word; //contains long links with ` overflow
+
+	@include tablet {
+		padding-left: 2rem;
+	}
+
+	@include desktop {
+		padding: 2rem;
+	}
+	* {
+		@include tablet {
+			max-width: 35rem;
+		}
+
+		@include desktop {
+			max-width: 42rem;
+		}
+	}
+
+	h2 {
+		font-weight: 700;
+		font-size: 1rem;
+		margin-bottom: 1.35rem;
+
+		@include desktop {
+			font-size: 1.1rem;
+		}
+
+		
+	}
+
+	p {
+		font-size: .875rem; //14pt
+		line-height: 1.35rem; //14/19
+		margin-bottom: 1.35rem;
+
+		@include desktop {
+			font-size: 1rem;
+		}
+		
+	}
+
+	a:link, a:visited {
+		color: $light-blue;
+		font-size: .875rem;
+		margin-bottom: 1.35rem;
+		transition: .2s ease all;
+
+		@include desktop {
+			font-size: 1rem;
+		}
+	}
+
+	a:hover, a:focus, a:active {
+		color: $blue;
+	}
+}
+
+.search footer {
+	width: 100%;
+	background-color: $blue;
+	padding: 1rem;
+
+	@include desktop {
+		width: 30%;
+		background: none;
+		text-align: center;
+		position: fixed;
+		bottom: 2%;
+		z-index: 1;
+	}
+}
